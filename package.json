@@ -1,0 +1,8 @@
+{
+  "name": "speckled-mushroom",
+  "version": "0.3.0",
+  "private": true,
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0"
+  }
+}
