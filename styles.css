@@ -120,3 +120,14 @@ input:focus,textarea:focus{border-color:var(--moss);box-shadow:0 0 0 3px rgba(57
   .section-head{align-items:start;flex-direction:column}
   .grid{columns:1}
 }
+
+.card-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.comments{border-top:1px solid var(--line);margin:18px -20px -20px;padding:18px 20px;background:#faf7ef}
+.comments h4{margin:0 0 12px;font-size:14px}
+.comment{padding:10px 0;border-top:1px solid var(--line)}
+.comment:first-child{border-top:0}
+.comment strong{font-size:13px}
+.comment p{margin:4px 0 0;color:var(--muted);font-size:14px;line-height:1.4;white-space:pre-wrap}
+.comment-form{padding:0;margin-top:12px}
+.comment-form input,.comment-form textarea{margin:6px 0}
+.comment-form button{padding:8px 12px;font-size:13px}
