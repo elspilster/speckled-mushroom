@@ -11,96 +11,47 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="/">
-      <span class="mushroom" aria-hidden="true">🍄</span>
-      <span>Speckled Mushroom</span>
-    </a>
-    <nav>
-      <a href="#gallery">Explore</a>
-      <button class="ghost" id="openComposer">+ Add something</button>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <p class="eyebrow">A SMALL CORNER OF THE INTERNET</p>
-      <h1>Make something.<br><em>Put it here.</em></h1>
-      <p class="lede">Pictures, thoughts, tiny stories, photographs, drawings, odd little ideas — each one gets its own card and a place to live.</p>
-      <div class="hero-actions">
-        <button class="primary" id="heroAdd">+ Add something</button>
-        <a class="secondary" href="#gallery">See what’s growing</a>
-      </div>
-      <div class="speckles" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </section>
-
-    <section class="gallery-wrap" id="gallery">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">LATEST</p>
-          <h2>Things growing here</h2>
-        </div>
-        <div class="filters" aria-label="Gallery filters">
-          <button class="filter active" data-filter="all">Everything</button>
-          <button class="filter" data-filter="image">Pictures</button>
-          <button class="filter" data-filter="text">Words</button>
-        </div>
-      </div>
-      <div class="grid" id="cardGrid"></div>
-    </section>
-  </main>
-
-  <dialog id="composer">
-    <form method="dialog" id="composerForm">
-      <div class="dialog-head">
-        <div>
-          <p class="eyebrow">NEW CARD</p>
-          <h3>Add something</h3>
-        </div>
-        <button class="icon-btn" value="cancel" aria-label="Close">×</button>
-      </div>
-
-      <label>
-        Title
-        <input id="cardTitle" maxlength="80" placeholder="Give it a little name" required />
-      </label>
-
-      <label>
-        Text
-        <textarea id="cardText" rows="5" maxlength="500" placeholder="Write something, or leave this blank if the picture says enough."></textarea>
-      </label>
-
-      <label>
-        Image URL <span>(optional for this prototype)</span>
-        <input id="cardImage" type="url" placeholder="https://…" />
-      </label>
-
-      <p class="prototype-note">Prototype mode: new cards are stored in this browser only. Real uploads and accounts come next.</p>
-
-      <div class="dialog-actions">
-        <button class="secondary" value="cancel">Cancel</button>
-        <button class="primary" id="postCard" value="default">Post card</button>
-      </div>
-    </form>
-  </dialog>
-
-  <template id="cardTemplate">
-    <article class="card">
-      <div class="card-image-wrap"><img class="card-image" alt=""></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="dot"></span><span class="kind"></span></div>
-        <h3 class="card-title"></h3>
-        <p class="card-text"></p>
-        <div class="card-foot">
-          <span class="handle">@guest</span>
-          <button class="share-btn">Share</button>
-        </div>
-      </div>
-    </article>
-  </template>
-
-  <script src="/app.js"></script>
-</body>
-</html>
+<header class="topbar">
+  <a class="brand" href="/"><span class="mushroom" aria-hidden="true">🍄</span><span>Speckled Mushroom</span></a>
+  <nav><a href="#gallery">Explore</a><button class="ghost" id="openComposer">+ Add a Wiggle</button></nav>
+</header>
+<main>
+<section class="hero">
+  <p class="eyebrow">A SMALL CORNER OF THE INTERNET</p>
+  <h1>Make something.<br><em>Put it here.</em></h1>
+  <p class="lede">Pictures, thoughts, tiny stories, photographs, drawings, odd little ideas — each one becomes a Wiggle with a place to live.</p>
+  <div class="hero-actions"><button class="primary" id="heroAdd">+ Add a Wiggle</button><a class="secondary" href="#gallery">See what’s growing</a></div>
+  <div class="speckles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+</section>
+<section class="gallery-wrap" id="gallery">
+  <div class="section-head">
+    <div><p class="eyebrow">LATEST WIGGLES</p><h2>Things growing here</h2></div>
+    <div class="filters" aria-label="Gallery filters">
+      <button class="filter active" data-filter="all">Everything</button><button class="filter" data-filter="image">Pictures</button><button class="filter" data-filter="text">Words</button>
+    </div>
+  </div>
+  <div class="grid" id="cardGrid"></div>
+</section>
+</main>
+<dialog id="composer">
+<form method="dialog" id="composerForm">
+  <div class="dialog-head"><div><p class="eyebrow" id="composerEyebrow">NEW WIGGLE</p><h3 id="composerHeading">Add a Wiggle</h3></div><button class="icon-btn" value="cancel" aria-label="Close">×</button></div>
+  <label>Title<input id="cardTitle" maxlength="80" placeholder="Give it a little name" required /></label>
+  <label>Text<textarea id="cardText" rows="5" maxlength="500" placeholder="Write something, or leave this blank if the picture says enough."></textarea></label>
+  <label>Image URL <span>(optional for this prototype)</span><input id="cardImage" type="url" placeholder="https://…" /></label>
+  <p class="prototype-note">Prototype mode: your Wiggles are stored in this browser only. Real uploads and accounts come next.</p>
+  <div class="dialog-actions"><button class="secondary" value="cancel">Cancel</button><button class="primary" id="postCard" value="default">Post Wiggle</button></div>
+</form>
+</dialog>
+<template id="cardTemplate">
+<article class="card">
+  <div class="card-image-wrap"><img class="card-image" alt=""></div>
+  <div class="card-body">
+    <div class="card-meta"><span class="dot"></span><span class="kind"></span></div>
+    <h3 class="card-title"></h3><p class="card-text"></p>
+    <div class="card-foot"><span class="handle">@guest</span><div class="card-actions"><button class="edit-btn share-btn">Edit</button><button class="delete-btn share-btn">Delete</button><button class="share-btn actual-share">Share</button></div></div>
+  </div>
+</article>
+</template>
+<script src="/app.js"></script>
+</body></html>
