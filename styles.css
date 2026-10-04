@@ -131,3 +131,13 @@ input:focus,textarea:focus{border-color:var(--moss);box-shadow:0 0 0 3px rgba(57
 .comment-form{padding:0;margin-top:12px}
 .comment-form input,.comment-form textarea{margin:6px 0}
 .comment-form button{padding:8px 12px;font-size:13px}
+
+/* Rolled-up comments: compact until hover/focus */
+.comments{max-height:42px;overflow:hidden;transition:max-height .35s ease,background .2s ease}
+.comments:hover,.comments:focus-within{max-height:900px}
+.comments .comment-list,.comments .comment-form{opacity:0;transform:translateY(-5px);transition:opacity .2s ease,transform .25s ease}
+.comments:hover .comment-list,.comments:hover .comment-form,.comments:focus-within .comment-list,.comments:focus-within .comment-form{opacity:1;transform:translateY(0)}
+.comment-count{cursor:pointer;user-select:none}
+.comment-count::after{content:"  ▾";font-family:Inter,system-ui,sans-serif;font-size:11px;color:var(--muted)}
+.comments:hover .comment-count::after,.comments:focus-within .comment-count::after{content:"  ▴"}
+@media (hover:none){.comments{max-height:none}.comments .comment-list,.comments .comment-form{opacity:1;transform:none}}
