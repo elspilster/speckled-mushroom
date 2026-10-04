@@ -27,7 +27,7 @@
   <div class="section-head">
     <div><p class="eyebrow">LATEST WIGGLES</p><h2>Things growing here</h2></div>
     <div class="filters" aria-label="Gallery filters">
-      <button class="filter active" data-filter="all">Everything</button><button class="filter" data-filter="image">Pictures</button><button class="filter" data-filter="text">Words</button>
+      <button class="filter active" data-filter="all">Everything</button><button class="filter" data-filter="image">Pictures</button><button class="filter" data-filter="text">Words</button><button class="filter" data-filter="link">Links</button>
     </div>
   </div>
   <div class="grid" id="cardGrid"></div>
@@ -36,7 +36,7 @@
 <dialog id="composer">
 <form method="dialog" id="composerForm">
   <div class="dialog-head"><div><p class="eyebrow" id="composerEyebrow">NEW WIGGLE</p><h3 id="composerHeading">Add a Wiggle</h3></div><button class="icon-btn" value="cancel" aria-label="Close">×</button></div>
-  <label>Title<input id="cardTitle" maxlength="80" placeholder="Give it a little name" required /></label>
+  <div class="wiggle-types"><button type="button" class="type-btn active" data-type="regular">Picture / Words</button><button type="button" class="type-btn" data-type="link">🔗 Link</button></div><div id="linkMaker" hidden><label>Paste a link<input id="sourceUrl" type="url" placeholder="https://…" /></label><button type="button" class="secondary" id="makePreview">Make preview</button><p class="prototype-note" id="previewStatus">We’ll fetch the title, description and preview picture. You can edit them before posting.</p></div><label>Title<input id="cardTitle" maxlength="80" placeholder="Give it a little name" required /></label>
   <label>Text<textarea id="cardText" rows="5" maxlength="500" placeholder="Write something, or leave this blank if the picture says enough."></textarea></label>
   <label>Image URL <span>(optional for this prototype)</span><input id="cardImage" type="url" placeholder="https://…" /></label>
   <p class="prototype-note">Wiggles are public. Please only post things you are happy for other visitors to see.</p>
@@ -49,7 +49,7 @@
   <div class="card-body">
     <div class="card-meta"><span class="dot"></span><span class="kind"></span></div>
     <h3 class="card-title"></h3><p class="card-text"></p>
-    <div class="card-foot"><span class="handle">@guest</span><div class="card-actions"><button class="edit-btn share-btn">Edit</button><button class="delete-btn share-btn">Delete</button><button class="share-btn actual-share">Share</button></div></div><section class="comments"><h4 class="comment-count">Comments</h4><div class="comment-list"></div><form class="comment-form"><input name="name" maxlength="40" placeholder="Your name"><textarea name="comment" maxlength="500" rows="2" placeholder="Add a comment…" required></textarea><button class="primary" type="submit">Post comment</button></form></section>
+    <a class="visit-link" target="_blank" rel="noopener noreferrer">Visit original ↗</a><div class="card-foot"><span class="handle">@guest</span><div class="card-actions"><button class="edit-btn share-btn">Edit</button><button class="delete-btn share-btn">Delete</button><button class="share-btn actual-share">Share</button></div></div><section class="comments"><h4 class="comment-count">Comments</h4><div class="comment-list"></div><form class="comment-form"><input name="name" maxlength="40" placeholder="Your name"><textarea name="comment" maxlength="500" rows="2" placeholder="Add a comment…" required></textarea><button class="primary" type="submit">Post comment</button></form></section>
   </div>
 </article>
 </template>
