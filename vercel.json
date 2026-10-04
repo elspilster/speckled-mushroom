@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/wiggle/:id",
+      "destination": "/api/share?id=:id"
+    }
+  ]
+}
