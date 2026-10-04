@@ -1,8 +1,1 @@
-{
-  "rewrites": [
-    {
-      "source": "/wiggle/:id",
-      "destination": "/api/share?id=:id"
-    }
-  ]
-}
+{"rewrites":[{"source":"/wiggle/:slug-:id(wiggle-.+)","destination":"/api/share?id=:id"},{"source":"/wiggle/:id","destination":"/api/share?id=:id"},{"source":"/sitemap.xml","destination":"/api/sitemap"},{"source":"/robots.txt","destination":"/api/robots"}]}
