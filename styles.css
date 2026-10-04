@@ -141,3 +141,5 @@ input:focus,textarea:focus{border-color:var(--moss);box-shadow:0 0 0 3px rgba(57
 .comment-count::after{content:"  ▾";font-family:Inter,system-ui,sans-serif;font-size:11px;color:var(--muted)}
 .comments:hover .comment-count::after,.comments:focus-within .comment-count::after{content:"  ▴"}
 @media (hover:none){.comments{max-height:none}.comments .comment-list,.comments .comment-form{opacity:1;transform:none}}
+
+.wiggle-types{display:flex;gap:8px;margin:8px 0 14px}.type-btn{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:10px 14px;cursor:pointer}.type-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}#linkMaker{padding:14px;border:1px dashed var(--line);border-radius:16px;background:#faf7ef;margin-bottom:12px}#linkMaker label{margin-top:0}.visit-link{display:inline-block;margin-top:14px;font-size:13px;font-weight:700;color:var(--moss)}
