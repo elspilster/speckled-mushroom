@@ -1,1 +1,19 @@
-{"rewrites":[{"source":"/wiggle/:slug-:id(wiggle-.+)","destination":"/api/share?id=:id"},{"source":"/wiggle/:id","destination":"/api/share?id=:id"},{"source":"/sitemap.xml","destination":"/api/sitemap"},{"source":"/robots.txt","destination":"/api/robots"}]}
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'self' https://oilfuel.co.uk https://www.oilfuel.co.uk"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {"source":"/wiggle/:slug-:id(wiggle-.+)","destination":"/api/share?id=:id"},
+    {"source":"/wiggle/:id","destination":"/api/share?id=:id"},
+    {"source":"/sitemap.xml","destination":"/api/sitemap"},
+    {"source":"/robots.txt","destination":"/api/robots"}
+  ]
+}
